@@ -1,3 +1,3 @@
 module Tribute
-  VERSION = "1.1.2.0"
+  VERSION = "2.0.5.0"
 end

@@ -7,4 +7,5 @@
 /pkg/
 /spec/reports/
 /tmp/
+/tribute_src/
 .DS_Store

@@ -1,8 +1,6 @@
 # Tribute
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tribute`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A cross-browser @mention engine written in native JS, no dependencies. Tested in Firefox, Chrome, iOS Safari, Safari, IE 9+, Edge 12+, Android 4+, and Windows Phone.
 
 ## Installation
 
@@ -16,26 +14,57 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Then, in your `app/assets/javascripts/application.js`:
 
-    $ gem install tribute
+```js
+*= require tribute
+```
 
-## Usage
+Finally, add the following to your `app/assets/stylesheets/application.css`:
 
-TODO: Write usage instructions here
+```css
+//= require tribute
+```
 
-## Development
+## Initializing
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+There are two ways to initialize Tribute, by passing an array of "collections" or by passing one collection object.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```js
+var tribute = new Tribute({
+  values: [
+    {key: 'Phil Heartman', value: 'pheartman'},
+    {key: 'Gordon Ramsey', value: 'gramsey'}
+  ]
+})
+```
 
-## Contributing
+You can pass multiple collections on initialization by passing in an array of collection objects to `collection`.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/tribute.
+```js
+var tribute = new Tribute({
+  collection: []
+})
+```
 
+### Attaching to elements
+
+Once initialized, Tribute can be attached to an `input`, `textarea`, or an element that supports `contenteditable`.
+
+```html
+<div id="caaanDo">I'm Mr. Meeseeks, look at me!</div>
+
+<div class="mentionable">Some text here.</div>
+<div class="mentionable">Some more text over here.</div>
+
+<script>
+  tribute.attach(document.getElementById('caaanDo'));
+
+  // also works with NodeList
+  tribute.attach(document.querySelectorAll('.mentionable'));
+</script>
+```
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

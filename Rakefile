@@ -13,8 +13,8 @@ namespace :tribute do
 
       sh 'git clone git@github.com:zurb/tribute.git tribute_src'
       sh "cd tribute_src && git checkout tags/v#{version}"
-      sh 'cp -R tribute_src/dist/tribute.css vendor/assets/stylesheets/index.css'
-      sh 'cp -R tribute_src/dist/tribute.js vendor/assets/javascripts/index.js'
+      sh 'cp -R tribute_src/dist/tribute.css vendor/assets/stylesheets/tribute/index.css'
+      sh 'cp -R tribute_src/dist/tribute.js vendor/assets/javascripts/tribute/index.js'
 
       puts "\n----------------\n-- Tribute Updated! --\n----------------\n"
     end

@@ -1,5 +1,7 @@
 # Tribute
 
+[![Gem Version](https://badge.fury.io/rb/tribute.svg)](https://badge.fury.io/rb/tribute)
+
 A cross-browser @mention engine written in native JS, no dependencies. Tested in Firefox, Chrome, iOS Safari, Safari, IE 9+, Edge 12+, Android 4+, and Windows Phone.
 
 ## Installation

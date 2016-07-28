@@ -4,23 +4,19 @@ A cross-browser @mention engine written in native JS, no dependencies. Tested in
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile, then bundle:
 
 ```ruby
 gem 'tribute'
 ```
 
-And then execute:
-
-    $ bundle
-
-Then, in your `app/assets/javascripts/application.js`:
+Add the following to your `app/assets/javascripts/application.js`:
 
 ```js
 *= require tribute
 ```
 
-Finally, add the following to your `app/assets/stylesheets/application.css`:
+Then, in your `app/assets/stylesheets/application.css`:
 
 ```css
 //= require tribute
@@ -64,6 +60,8 @@ Once initialized, Tribute can be attached to an `input`, `textarea`, or an eleme
   tribute.attach(document.querySelectorAll('.mentionable'));
 </script>
 ```
+
+For more usage information, see the official [Tribute.js README](https://github.com/zurb/tribute#tribute).
 
 ## License
 

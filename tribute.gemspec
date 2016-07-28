@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Zoran"]
   spec.email         = ["zoran@zurb.com"]
 
-  spec.summary       = %q{Native JS @mentions.}
+  spec.summary       = %q{Tribute.js @mentions for Rails.}
   spec.homepage      = "https://github.com/zurb/tribute"
   spec.license       = "MIT"
 
